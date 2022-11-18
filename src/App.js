@@ -1,6 +1,6 @@
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
-
+import NewExpense from "./components/Expenses/NewExpense/NewExpense";
 const App = () => {
   // expenses라는 배열안에 객체를 만듦
   const expenses = [
@@ -24,6 +24,11 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
   //원시적인 방법
   // return React.createElement(
   //   'div',
@@ -35,7 +40,7 @@ const App = () => {
   //JSX를 사용한 방법 함수안에 html태그를 쓸 수 있다.
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
