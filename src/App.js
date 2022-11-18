@@ -1,6 +1,6 @@
 import React from "react";
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from "./components/Expenses/NewExpense/NewExpense";
+import NewExpense from "./components/NewExpense/NewExpense";
 const App = () => {
   // expenses라는 배열안에 객체를 만듦
   const expenses = [
@@ -25,9 +25,9 @@ const App = () => {
     },
   ];
 
-  const addExpenseHandler = (expense) => {
+  const addExpenseHandler = (expenses) => {
     console.log("In App.js");
-    console.log(expense);
+    console.log(expenses);
   };
   //원시적인 방법
   // return React.createElement(
